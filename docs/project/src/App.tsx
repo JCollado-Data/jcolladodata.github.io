@@ -22,8 +22,11 @@ import {
   ExternalLink,
   GitBranch,
   Play,
-  Users
+  Users,
+  HardDrive,
+  Wrench
 } from 'lucide-react';
+
 
 function App() {
   return (
@@ -35,7 +38,7 @@ function App() {
             Javier Collado
           </h1>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-600 mb-6">
-            Data Scientist & ML Engineer
+            Data Scientist/Data Engineer/ML Engineer
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
             Transforming complex data into actionable insights and building intelligent solutions
@@ -65,8 +68,10 @@ function App() {
             </a>
           </div>
           <a 
-            href="/path-to-your-resume.pdf" 
-            download
+            href="../images/JavierColladoCV.pdf" 
+            download= "JavierColladoCV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
           >
             <FileDown className="w-5 h-5" />
@@ -80,26 +85,36 @@ function App() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">Core Competencies</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <SkillCard 
               icon={<Database className="w-8 h-8" />}
               title="Data Engineering"
-              description="ETL pipelines, data warehousing, and big data technologies"
+              description="ETL Pipelines, Data Warehousing, AWS, OCI, GCP"
             />
             <SkillCard 
               icon={<Brain className="w-8 h-8" />}
               title="Machine Learning"
-              description="Predictive modeling, deep learning, and NLP"
+              description="Predictive Modeling, Deep Learning, NumPy, SciPy, Pandas, Scikit-learn, TensorFlow, PyTorch"
             />
             <SkillCard 
               icon={<LineChart className="w-8 h-8" />}
               title="Data Analysis"
-              description="Statistical analysis, visualization, and reporting"
+              description="Statistical analysis, Data Modelling, Data Visualization, Tableau, JMP"
             />
             <SkillCard 
               icon={<Code2 className="w-8 h-8" />}
               title="Programming"
-              description="Python, R, SQL, and cloud platforms"
+              description="Python, R, SQL, C++, Powershell, Bash, Matlab"
+            />
+            <SkillCard 
+              icon={<HardDrive className="w-8 h-8" />}
+              title="Data Management"
+              description="SQL, No-SQL, SSMS, Postgres, Cloud Platforms"
+            />
+            <SkillCard 
+              icon={<Wrench className="w-8 h-8" />}
+              title="Tools & Platforms"
+              description="Jupyter Notebook, VS Code, JIRA, ServiceNow, Kubernetes, Docker"
             />
           </div>
         </div>
@@ -107,50 +122,98 @@ function App() {
 
       {/* Experience Sections */}
       <section className="py-16 bg-gradient-to-br from-gray-900 to-blue-900">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
+        <div className="container mx-auto px-0.5">
+          <h1 className="underline text-3xl font-bold text-center mb-6 text-white"> Professional Experince</h1>
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Professional Experience */}
             <div>
-              <h2 className="text-2xl font-bold text-center mb-2 text-white">Professional Experience</h2>
+              <h2 className="text-2xl font-bold text-center mb-2 text-white">Technology</h2>
               <p className="text-gray-300 text-center mb-6 text-sm">
                 Data Science & Machine Learning
               </p>
               <ExperienceCarousel 
                 experiences={[
                   {
-                    title: "Senior Data Scientist",
-                    company: "Tech Innovation Corp",
-                    period: "2022 - Present",
-                    location: "San Francisco, CA",
-                    description: "Leading ML model development for customer behavior prediction.",
+                    title: "Software Developer",
+                    company: "Jack In The Box",
+                    period: "2024 - Present",
+                    location: "San Diego, CA",
+                    description: "Develop software solutions for Resturant Front and Back of House.",
                     achievements: [
-                      "40% increase in customer retention",
-                      "60% faster model deployment",
-                      "25% improved model accuracy"
+                      "Completed 46 sprints varying in lenght from 1-4 weeks",
+                      "Established new technical documentations policies",
+                      "Rewrote old code, improving efficency by 15%"
                     ]
                   },
                   {
-                    title: "Machine Learning Engineer",
-                    company: "Data Dynamics Ltd",
-                    period: "2020 - 2022",
-                    location: "Boston, MA",
-                    description: "Developed ML solutions for financial services.",
+                    title: "Sr Data Admin",
+                    company: "Jack In the Box",
+                    period: "2023 - 2024",
+                    location: "San Diego, CA",
+                    description: "Supervised Resturant Menu System database.",
                     achievements: [
-                      "75% reduction in fraud",
-                      "40% faster inference time",
-                      "Automated performance monitoring"
+                      "Reduced average service ticket resolutions time by 25% ",
+                      "Directed the POS and Menu Integration for 12 new store openings",
+                      "Introduced automated testing protocols, reducing testing time by 20%"
                     ]
                   },
                   {
-                    title: "Data Scientist",
-                    company: "Analytics Innovate",
-                    period: "2018 - 2020",
-                    location: "New York, NY",
-                    description: "Built predictive models for retail clients.",
+                    title: "Data Scientist (Contract)",
+                    company: "Sunovian Pharmacuticals",
+                    period: "2022 - 2023",
+                    location: "Boston, MA (Remote)",
+                    description: "Assist in database migration and testing.",
                     achievements: [
-                      "35% increase in marketing ROI",
-                      "25% higher conversion rate",
-                      "Real-time metrics tracking"
+                      "Performed A-B Testing.",
+                      "Developed 18 new training documents.",
+                      "Established 6 Key dashboards for stakeholders to track product development."
+                    ]
+                  }
+                ]}
+                compact={true}
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold text-center mb-2 text-white">Scientific/Medical</h2>
+              <p className="text-gray-300 text-center mb-6 text-sm">
+                Scientist & Chemical Engineer
+              </p>
+              <ExperienceCarousel 
+                experiences={[
+                  {
+                    title: "Manufacturing Scientist",
+                    company: "Ionis Pharmacuticals",
+                    period: "2021 - 2022",
+                    location: "Carlsbad, CA",
+                    description: "Performed drug synthization and statistical quaility assurance. ",
+                    achievements: [
+                      "Validated data for 3 FDA drug submissions, ensuring regulatory compliance",
+                      "Revised 10 SOPs improving synthesization process",
+                      "Increased data infrastructure improving operations by 20%"
+                    ]
+                  },
+                  {
+                    title: "Lab Operations lead",
+                    company: "Access Biologicals (Now Grifols Biologicals)",
+                    period: "2020 - 2021",
+                    location: "Vista, CA",
+                    description: "Manage lab operations and data management",
+                    achievements: [
+                      "Created SQL databases, reducing data retrieval times by 30%",
+                      "Reduced operations costs by 18% through process analysis and procurement optimization",
+                      "Developed 17 SOPs and training guides, enhancing team readiness and operational consistency"
+                    ]
+                  },
+                  {
+                    title: "Lab Tech",
+                    company: "Access Biologicals (Now Grifols Biologicals)",
+                    period: "2019 - 2020",
+                    location: "Vista, CA",
+                    description: "Conducted plasma processing and virological studies.",
+                    achievements: [
+                      "Assisted in the manufacture of convalecent covid plasma",
+                      "Processed 38 batches of plasma for commerical use",
+                      "Assisted in virological studies in BSL-2 level laboratory"
                     ]
                   }
                 ]}
@@ -167,28 +230,28 @@ function App() {
               <ExperienceCarousel 
                 experiences={[
                   {
-                    title: "Infantry Squad Leader",
-                    company: "United States Marine Corps",
-                    period: "2014 - 2018",
+                    title: "Electro-Optical Ordnance Repairer",
+                    company: "1st Battalion 1st Marines",
+                    period: "2012 - 2017",
                     location: "Camp Pendleton, CA",
-                    description: "Led a 13-person infantry squad in combat operations and tactical planning.",
+                    description: "Maintaine and repair infantry lasers, optics, missile system and other fire control equipment.",
                     achievements: [
-                      "Navy and Marine Corps Achievement Medal recipient",
+                      "Assisted in the revision of the Javalin missile system Technical Manual with Lockhead Martin",
                       "3 successful overseas deployments",
-                      "Trained 20+ Marines in combat tactics"
+                      "Worked closly with Raytheon in Saber Missile system training across Pendleton"
                     ],
                     isMilitary: true
                   },
                   {
-                    title: "Combat Instructor",
-                    company: "United States Marine Corps",
-                    period: "2016 - 2017",
-                    location: "Quantico, VA",
-                    description: "Selected instructor for new Marine Corps officers.",
+                    title: "Armory Maintnance Cheif",
+                    company: "1st Battalion 1st Marines",
+                    period: "2015 - 2017",
+                    location: "Camp Pendleton, CA",
+                    description: "Maintain all data and operations for the battalion armory.",
                     achievements: [
-                      "Trained 200+ officer candidates",
-                      "Instructor of the Quarter",
-                      "Developed new training protocols"
+                      "Managed all data and records for the battalion armory vauling over 8 Million dollars",
+                      "Managed armory invetory while conducting operations across 3 countries at once",
+                      "Supervised and trained 40 Marines under the Battalion armory"
                     ],
                     isMilitary: true
                   }
@@ -204,31 +267,83 @@ function App() {
       {/* Certificates Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-800">Certifications</h2>
+          <h2 className="text-3xl font-bold underline text-center mb-4 text-gray-800">Education</h2>
           <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">
-            Professional certifications and credentials in data science and machine learning
+            Degrees and professional certifications from National University, UCSD, UC Davis, John Hopkins, Stanford, Google, Oracle, AWS and more.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <CertificateCard 
-              title="AWS Machine Learning Specialty"
-              issuer="Amazon Web Services"
-              date="2024"
-              image="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800"
-              link="#"
+              title="Degrees and Post Graduate Work"
+              issuer=""
+              date="Bachelor of Science & Post Grad Certificate"
+              image="../images/diploma.jpg"
+              certificates={[
+                { name: "Associate of Science Degree", pdfPath: "../images/degree/Asdiploma.pdf" },
+                { name: "Bachelor of Science Degree", pdfPath: "../images/degree/Bachelor_Degree.pdf" },
+                { name: "Post Graduate Certificate", pdfPath: "../images/degree/UCSD_DataScienceCert.pdf" }
+              ]}
             />
             <CertificateCard 
-              title="TensorFlow Developer Certificate"
-              issuer="Google"
-              date="2023"
-              image="https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&q=80&w=800"
-              link="#"
+              title="Data Management"
+              issuer=""
+              date="SQL, Cloud"
+              image="../images/datamanagement.jpg"
+              certificates={[
+                { name: "Oracle Certified Foundations Associate", pdfPath: "../images/datamanagement/OCIFoundationCertificate.pdf" },
+                { name: "SQL for Data Science", pdfPath: "../images/datamanagement/UCDavisSQL.pdf" }
+              ]}
             />
             <CertificateCard 
-              title="Deep Learning Specialization"
-              issuer="DeepLearning.AI"
-              date="2023"
-              image="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&q=80&w=800"
-              link="#"
+              title="Data Analytics"
+              issuer=""
+              date="Data Analytics, Data visulization, Statistics"
+              image="../images/dataanalytics.jpg"
+              certificates={[
+                { name: "Google Data Analytics", pdfPath: "../images/dataanalytics/GoogleDataAnalytics.pdf" },
+                { name: "Data Visualization with Tableau", pdfPath: "../images/dataanalytics/UCDavisFullDataVisualizationwithTableau.pdf" },
+                { name: "Creating Dashboards and Storytelling with Tableau", pdfPath: "../images/dataanalytics/UCDavisCreatingDashboardsandStorytellingwithTableau.pdf" },
+                { name: "Essential Design Principles for Tableau", pdfPath: "../images/dataanalytics/UCDavisEsstentialDesignPrinciplesforTableau.pdf" },
+                { name: "Fundamentals of Visualization with Tableau", pdfPath: "../images/dataanalytics/UCDavisFundamentalsofVisualizationwithTableau.pdf" },
+                { name: "Visual Analytics with Tableau", pdfPath: "../images/dataanalytics/UCDavisVisualAnalyticsWithTableau.pdf" }
+              ]}
+            />
+            <CertificateCard 
+              title="Machine Learning"
+              issuer=""
+              date="Cloud, Big Data, Data Modeling"
+              image="../images/machinelearning.jpg"
+              certificates={[
+                { name: "Google CLoud and Big Data and Machine Learning Fundamentals", pdfPath: "../images/machinelearning/GoogleCloudBigDataandMachineLearningFundamentals.pdf" },
+                { name: "Fundamentals of Quantitative Modeling", pdfPath: "../images/machinelearning/StanfordSupervisedMachineLearning_RegressionandClassification.pdf" },
+                { name: "Supervised Machine Learning: Regression and Classification", pdfPath: "../images/machinelearning/UPennFundamentalsofQuantitativeModeling.pdf" }
+              ]}
+            />
+            <CertificateCard  
+              title="Public Health"
+              issuer=""
+              date="Epidemology, FEMA, WHO"
+              image="../images/publichealth.jpg"
+              certificates={[
+                { name: "Infection Prevention and Control for Novel Coronavirus", pdfPath: "../images/publichealth/COVID-19-IPC-EN_ConfirmationOfParticipation.pdf" },
+                { name: "Data and Health Indicators in Public Health Practice", pdfPath: "../images/publichealth/DataandHealthIndicatorsinPublicHealthPracticeJohnsHopkins.pdf" },
+                { name: "Epidemiology in Public Health Practice", pdfPath: "../images/publichealth/EpidemiologyinPublicHealthPracticeJohnsHopkins.pdf" },
+                { name: "Essential Epidemiologic Tools for Public Health Practice", pdfPath: "../images/publichealth/EssentialEpidemiologicToolsforPublicHealthJohnsHopkins.pdf" },
+                { name: "Health Communication", pdfPath: "../images/publichealth/healthcommunication.pdf" },
+                { name: "Outbreaks and Epidemics", pdfPath: "../images/publichealth/OutbreaksandEpidemicsJonhsHopkins.pdf" },
+                { name: "Public Health 101", pdfPath: "../images/publichealth/public-health-101.pdf" },
+                { name: "Surveillance Systems: Analysis, Dissemination, and Special Systems", pdfPath: "../images/publichealth/SurveillancesystemsAnalysisdisseminationandspecialsystems.pdf" },
+                { name: "Surveillance Systems: The Building Blocks", pdfPath: "../images/publichealth/SurveillanceSystemsThebuildingBlocksJohnsHopkins.pdf" }
+              ]}
+            />
+            <CertificateCard 
+              title="Life Sciences"
+              issuer=""
+              date="Genetics, Genomics, NGS"
+              image="../images/lifescience.jpg"
+              certificates={[
+                { name: "Genomic Data Science with Galaxy", pdfPath: "../images/lifesciences/JohnHopkinsGenomicDataSciencewithGalaxy.pdf" },
+                { name: "Introduction to Genomic Technologies", pdfPath: "../images/lifesciences/JohnHopkinsIntroductiontoGenomicTechnologies.pdf" }
+              ]}
             />
           </div>
         </div>
@@ -243,17 +358,17 @@ function App() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard 
-              title="Predictive Analytics Dashboard"
-              description="Built an end-to-end ML pipeline for real-time prediction of customer churn with 92% accuracy. Implemented automated retraining pipeline and A/B testing framework."
+              title="Credit Risk Analysis"
+              description="Evaluating different crieteria to determine Credit Risk utilizing multiple models."
               image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-              tags={['Python', 'TensorFlow', 'AWS', 'MLflow']}
+              tags={['Python', 'Jupyter Notebook', 'Pandas', 'Numpy']}
               link="#"
             />
             <ProjectCard 
-              title="NLP Text Classification"
-              description="Developed a BERT-based multi-label classification system for customer support tickets, reducing response time by 45% and improving routing accuracy to 89%."
+              title="Neural Network Models"
+              description="The purpose of this project is to analysis the AlphabetSoupCharity 'ASC' and determine which fund applicants will be successful and be best suited for ASC funds."
               image="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800"
-              tags={['PyTorch', 'BERT', 'Flask', 'Docker']}
+              tags={['Pandas', 'TensorFlow', 'SciKit Learn', 'Jupyter Notebook']}
               link="#"
             />
             <ProjectCard 
@@ -395,7 +510,8 @@ function ExperienceCarousel({ experiences, theme = 'default', compact = false })
   );
 }
 
-function CertificateCard({ title, issuer, date, image, link }) {
+function CertificateCard({ title, issuer, date, image, certificates }) {
+  
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
@@ -408,16 +524,11 @@ function CertificateCard({ title, issuer, date, image, link }) {
           <img src={image} alt={title} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6">
-            <h3 className="text-xl font-semibold text-white mb-1">{title}</h3>
-            <p className="text-white/90 text-sm">{issuer}</p>
+            <h3 className="text-xl font-semibold text-white mb-1  [text-shadow:2px_2px_2px_black]"> 
+               {title}
+            </h3>
+            <p className="text-white/90 text-sm">{date}</p>
           </div>
-        </div>
-        <div className="p-4 flex justify-between items-center">
-          <div className="flex items-center gap-2 text-blue-600">
-            <Award className="w-5 h-5" />
-            <span className="text-sm font-medium">View Certificate</span>
-          </div>
-          <span className="text-sm text-gray-500">{date}</span>
         </div>
       </div>
 
@@ -441,37 +552,20 @@ function CertificateCard({ title, issuer, date, image, link }) {
             </div>
             
             {/* Modal Content */}
-            <div className="p-4">
-              <div className="relative aspect-[16/9] w-full">
-                <img 
-                  src={image} 
-                  alt={title} 
-                  className="w-full h-full object-contain rounded-lg"
-                />
+              <div className="p-4 max-h-[80vh] overflow-y-auto">
+                {certificates.map((cert, index) => (
+                  <div key={index} className="mb-6">
+                    <h4 className="text-lg font-medium text-gray-700 mb-2">{cert.name}</h4>
+                    <div className="relative aspect-[16/9] w-full border border-gray-300 rounded-lg overflow-hidden">
+                      <iframe 
+                        src={cert.pdfPath} 
+                        className="w-full h-full"
+                        frameBorder="0"
+                      />
+                    </div>
+                  </div>
+                ))}
               </div>
-              
-              {/* Certificate Details */}
-              <div className="mt-4 space-y-2">
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5 text-blue-600" />
-                  <span className="text-gray-700">Credential ID: {Math.random().toString(36).substring(2, 15).toUpperCase()}</span>
-                </div>
-                <p className="text-gray-600">
-                  This certificate verifies the completion of the {title} program, demonstrating proficiency in advanced concepts and practical applications.
-                </p>
-                {link && (
-                  <a 
-                    href={link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    Verify Certificate
-                    <ChevronRight className="w-4 h-4" />
-                  </a>
-                )}
-              </div>
-            </div>
           </div>
         </div>
       )}
@@ -483,28 +577,27 @@ function ProjectCard({ title, description, image, tags, link }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const projectDetails = {
-    overview: "This project showcases the implementation of advanced machine learning techniques to solve real-world problems. It demonstrates both technical expertise and practical application.",
+    overview: "This project showcases the implementation of advanced machine learning techniques to solve real-world problems. While comparing different models I have Identified the AdaBoost Classifier as the most optimal for this dataset.",
     challenges: [
       "Handling large-scale data processing efficiently",
       "Implementing real-time prediction capabilities",
       "Optimizing model performance for production",
     ],
     technologies: {
-      frontend: ["React", "TypeScript", "TailwindCSS"],
-      backend: ["Python", "FastAPI", "PostgreSQL"],
-      deployment: ["Docker", "AWS", "CI/CD"],
+      frontend: ["N/A"],
+      backend: ["Python", "Juypter Notebook", "Pandas"],
+      deployment: ["Github"],
     },
     metrics: [
-      { label: "Performance Improvement", value: "40%" },
-      { label: "User Adoption", value: "10,000+" },
-      { label: "Processing Time", value: "-60%" },
+      { label: "Balance Accuracy Score", value: "0.93166" },
+      { label: "Percision Score", value: "0.99" },
+      { label: "Recall Score", value: "0.94" },
     ],
     team: {
-      size: 4,
-      roles: ["Lead Developer", "ML Engineer", "Data Scientist", "DevOps"],
+      size: 1,
+      roles: ["Data Scientist"],
     },
-    demoUrl: "https://demo.example.com",
-    repoUrl: "https://github.com/example/project",
+    repoUrl: "https://github.com/JCollado-Data/Credit_Risk_Analysis",
   };
 
   return (
